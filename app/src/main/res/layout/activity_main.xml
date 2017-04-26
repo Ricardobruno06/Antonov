@@ -23,22 +23,20 @@
             android:orientation="horizontal"
             android:id="@+id/layout">
 
-            <EditText
-                android:id="@+id/editText2"
-                android:layout_width="160dp"
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="12"
-                android:hint="IP"
-                android:inputType="textPersonName"
+                android:text="Cidade: "
+                android:textSize="20sp" />
 
-                />
 
             <EditText
                 android:id="@+id/editText3"
-                android:layout_width="100dp"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:ems="12"
-                android:hint="Chave"
+                android:hint="Cidade"
                 android:inputType="textPersonName"
                 android:layout_marginBottom="32dp"
 
@@ -50,13 +48,12 @@
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/layout"
+            android:layout_marginBottom="32dp"
+
             android:ems="12"
             android:hint="Mensagem"
-            android:inputType="textPersonName"
-            android:layout_marginBottom="32dp"
-            android:layout_below="@+id/layout"
-
-            />
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button"

@@ -13,7 +13,7 @@ public abstract class EmitLogTopic {
 
     private static final String EXCHANGE_NAME = "topic_logs";
 
-    public static void emit(String msg, String ip, String chave){
+    public static void emit(String msg, String chave){
 
 
         //public static void main(String[] argv) {
@@ -21,7 +21,7 @@ public abstract class EmitLogTopic {
             Channel channel = null;
             try {
                 ConnectionFactory factory = new ConnectionFactory();
-                factory.setHost(ip);
+                factory.setHost("10.180.42.52");
 
                 connection = factory.newConnection();
                 channel = connection.createChannel();
@@ -50,7 +50,7 @@ public abstract class EmitLogTopic {
 
     }
 
-        /*private static String getRouting(String[] strings){
+        private static String getRouting(String[] strings){
             if (strings.length < 1)
                 return "anonymous.info";
             return strings[0];
@@ -71,6 +71,6 @@ public abstract class EmitLogTopic {
                 words.append(delimiter).append(strings[i]);
             }
             return words.toString();
-        }*/
+        }
 
 }

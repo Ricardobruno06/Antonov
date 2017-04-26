@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button enviar = (Button) findViewById(R.id.button);
-        final EditText ip = (EditText) findViewById(R.id.editText);
-        final EditText msg = (EditText) findViewById(R.id.editText2);
+        //final EditText ip = (EditText) findViewById(R.id.editText);
+        final EditText msg = (EditText) findViewById(R.id.editText);
         final EditText chave = (EditText) findViewById(R.id.editText3);
 
         enviar.setOnClickListener(new View.OnClickListener() {
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String chaves = chave.getText().toString();
                 String msgs = msg.getText().toString();
-                String ips = ip.getText().toString();
-                EmitLogTopic.emit(msgs, ips, chaves);
+                //String ips = ip.getText().toString();
+                EmitLogTopic.emit(msgs, chaves);
 
 
             }
